@@ -1,0 +1,629 @@
+/* =========================================
+   1. General Reset & Base Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo Wrapper */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+/* The "S" Bean Emblem */
+.logo-emblem {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #2c1a12;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.s-bean {
+    color: #d4a373;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Georgia', serif;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* The Golden Halo Animation */
+.halo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d4a373;
+    border-radius: 50%;
+    animation: pulseHalo 2s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulseHalo {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+/* Coffee Text Polish */
+.coffee-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #fdfdfd;
+    text-transform: uppercase;
+    border-left: 1px solid rgba(212, 163, 115, 0.4);
+    padding-left: 12px;
+}
+
+/* Footer Base Styles */
+footer {
+    background: #2c1a12;
+    color: #fff;
+    padding: 60px 10% 20px;
+    border-top: 3px solid #d4a373;
+}
+
+/* Horizontal Layout for Laptops & Tabs */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal space horizontally */
+}
+
+.footer-brand-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d4a373;
+    margin-left: 10px;
+}
+
+.footer-table td {
+    padding: 5px 10px 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-table a, .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-table a:hover, .footer-links a:hover {
+    color: #d4a373;
+}
+
+/* Vertical Layout for Mobile (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Switches from Horizontal to Vertical */
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-table {
+        margin: 0 auto; /* Centers the table on mobile */
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Existing Rainbow Letter Styles (Keep these) */
+.rainbow-brand {
+    display: flex;
+    gap: 2px;
+}
+
+.letter {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    animation: rotateAndStyle 3s infinite linear;
+    transform-style: preserve-3d;
+}
+
+/* ... keep previous nth-child colors and @keyframes rotateAndStyle here ... */
+
+body {
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* About Section Global Styles */
+.about-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Vertical for Mobile */
+    align-items: center;
+    gap: 40px;
+}
+
+/* Visual Components */
+.about-visual {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 15px 15px 0px var(--gold);
+    display: block;
+}
+
+.experience-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--espresso);
+    color: var(--gold);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.experience-badge .years {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.experience-badge p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Text Styling */
+.about-text-content {
+    text-align: center; /* Center for mobile */
+}
+
+.about-header .tag {
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.about-text-content h2 {
+    font-size: 2.2rem;
+    color: var(--espresso);
+    margin: 10px 0 20px;
+}
+
+.main-para, .secondary-para {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Stats Row */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--espresso);
+}
+
+.stat-box span {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   LAPTOP & TAB VERSION (Screens > 992px)
+   ========================================= */
+@media (min-width: 992px) {
+    .about-container {
+        flex-direction: row; /* Horizontal for Laptops */
+        text-align: left;
+        gap: 80px;
+    }
+
+    .about-visual {
+        flex: 1;
+    }
+
+    .about-text-content {
+        flex: 1.2;
+        text-align: left;
+    }
+
+    .about-text-content h2 {
+        font-size: 3rem;
+    }
+
+    .about-stats {
+        justify-content: flex-start;
+    }
+
+    .experience-badge {
+        left: -25px; /* Move badge to other side on laptop for style */
+        right: auto;
+        top: -25px;
+    }
+}
+
+/* Small Mobile Tweaks */
+@media (max-width: 480px) {
+    .about-section { padding: 50px 5%; }
+    .about-text-content h2 { font-size: 1.8rem; }
+    .about-visual img { box-shadow: 10px 10px 0px var(--gold); }
+}
+
+/* =========================================
+   2. Navigation Bar
+   ========================================= */
+
+/* Dynamic Selection Box */
+.selection-box {
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff;
+    border: 2px solid #1e3932;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.selection-box h3 {
+    color: #1e3932;
+    margin-bottom: 20px;
+}
+
+.selected-item-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d4a373;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c1a12;
+    padding-top: 15px;
+}
+
+.empty-msg {
+    color: #999;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #2c1a12; /* Coffee Dark Brown */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span { 
+    color: #d4a373; /* Golden Tan */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover { 
+    color: #d4a373; 
+}
+
+/* =========================================
+   3. Hero Section
+   ========================================= */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 10px; 
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d4a373;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #bc8a5f;
+}
+
+/* =========================================
+   4. Menu Section (The Core Layout)
+   ========================================= */
+.menu-section {
+    padding: 80px 10%;
+    background-color: #fdfdfd;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #2c1a12;
+}
+
+.section-title p {
+    color: #d4a373;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 60px;
+}
+
+/* Category Headers */
+.menu-category h3 {
+    font-size: 1.5rem;
+    color: #1e3932; /* Starbucks-inspired dark green */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-category h3 .icon {
+    margin-right: 10px;
+    font-style: normal;
+}
+
+/* Individual Menu Items */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+}
+/* Dynamic Selection Box */
+.selection-box {
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff;
+    border: 2px solid #1e3932;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.selection-box h3 {
+    color: #1e3932;
+    margin-bottom: 20px;
+}
+
+.selected-item-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d4a373;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c1a12;
+    padding-top: 15px;
+}
+
+.empty-msg {
+    color: #999;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.details h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 0.85rem;
+    color: #777;
+    padding-right: 15px;
+}
+
+/* Price Styling */
+.price {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #2c1a12;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* =========================================
+   5. Footer
+   ========================================= */
+footer {
+    background: #2c1a12;
+    color: #fff;
+    text-align: center;
+    padding: 40px 5%;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* =========================================
+   6. Responsive Design
+   ========================================= */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+    .menu-grid {
+        gap: 30px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links li a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section {
+        padding: 50px 5%;
+    }
+}

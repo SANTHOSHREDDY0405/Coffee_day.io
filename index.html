@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Day | Freshly Brewed</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="logo">
+    <div class="logo-emblem">
+        <div class="s-bean">S</div>
+        <div class="halo"></div>
+    </div>
+    <div class="rainbow-brand">
+        <span class="letter">S</span>
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">T</span>
+        <span class="letter">H</span>
+        <span class="letter">U</span>
+    </div>
+    <span class="coffee-text">COFFEE</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Start Your Day Right</h1>
+            <p>Experience the finest beans roasted to perfection.</p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+    <div class="about-container">
+        
+        <div class="about-visual">
+            <div class="experience-badge">
+                <span class="years">1</span>
+                <p>Year of <br>Excellence</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Santhu Coffee Craft">
+        </div>
+        
+        <div class="about-text-content">
+            <div class="about-header">
+                <span class="tag">Established 2025</span>
+                <h2>Best in the Business</h2>
+            </div>
+            <p class="main-para">
+                At <strong>Santhu Coffee</strong>, we believe every cup tells a story. We have navigated 1 year of sweet challenges, turning every hurdle into a milestone. Today, we stand proud having achieved most of our ambitious goals through dedication and a passion for the perfect brew.
+            </p>
+            <p class="secondary-para">
+                We are the ones who give the best, most memorable coffee day to our visitors. Every sip is crafted to ensure your day starts right.
+            </p>
+            
+            <div class="about-stats">
+                <div class="stat-box">
+                    <strong>365+</strong>
+                    <span>Days Active</span>
+                </div>
+                <div class="stat-box">
+                    <strong>10k+</strong>
+                    <span>Cups Served</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="section-title">
+            <h2>Coffee Day Menu</h2>
+            <p>Freshly brewed in India</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3><i class="icon">☕</i> Signature Beverages</h3>
+                
+                <div class="menu-item" onclick="selectAndRedirect('Java Chip Frappuccino', 345, 'A cold, creamy blend of mocha sauce, chocolate chips, milk, and ice.')">
+                    <div class="details">
+                        <h4>Java Chip Frappuccino</h4>
+                        <p>Mocha sauce and chocolate chips with milk and ice.</p>
+                    </div>
+                    <div class="price">₹345</div>
+                </div>
+
+                <div class="menu-item" onclick="selectAndRedirect('Iced Brown Sugar Oatmilk', 415, 'Shaken espresso with oatmilk and cinnamon.')">
+                    <div class="details">
+                        <h4>Iced Brown Sugar Oatmilk</h4>
+                        <p>Shaken espresso with oatmilk and cinnamon.</p>
+                    </div>
+                    <div class="price">₹415</div>
+                </div>
+
+                <div class="menu-item" onclick="selectAndRedirect('Vanilla Sweet Cream Cold Brew', 325, 'Slow-steeped coffee with a float of sweet cream.')">
+                    <div class="details">
+                        <h4>Vanilla Sweet Cream Cold Brew</h4>
+                        <p>Slow-steeped coffee with a float of sweet cream.</p>
+                    </div>
+                    <div class="price">₹325</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3><i class="icon">🥪</i> Fresh Bites</h3>
+                
+                <div class="menu-item" onclick="selectAndRedirect('Tandoori Paneer Sandwich', 290, 'Spiced paneer in a toasted sourdough bread.')">
+                    <div class="details">
+                        <h4>Tandoori Paneer Sandwich</h4>
+                        <p>Spiced paneer in a toasted sourdough bread.</p>
+                    </div>
+                    <div class="price">₹290</div>
+                </div>
+
+                <div class="menu-item" onclick="selectAndRedirect('Butter Croissant', 210, 'Classic flaky, buttery French-style pastry.')">
+                    <div class="details">
+                        <h4>Butter Croissant</h4>
+                        <p>Classic flaky, buttery French-style pastry.</p>
+                    </div>
+                    <div class="price">₹210</div>
+                </div>
+
+                <div class="menu-item" onclick="selectAndRedirect('New York Cheesecake', 375, 'Rich, creamy cheesecake on a graham cracker crust.')">
+                    <div class="details">
+                        <h4>New York Cheesecake</h4>
+                        <p>Rich, creamy cheesecake on a graham cracker crust.</p>
+                    </div>
+                    <div class="price">₹375</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+    <div class="footer-container">
+        <div class="footer-section footer-brand">
+            <div class="logo">
+                <div class="logo-emblem">
+                    <div class="s-bean">S</div>
+                    <div class="halo"></div>
+                </div>
+                <span class="footer-brand-name">SANTHU COFFEE</span>
+            </div>
+            <p>Brewing happiness in every cup.</p>
+        </div>
+
+        <div class="footer-section footer-contact">
+            <h3>Contact Us</h3>
+            <table class="footer-table">
+                <tr>
+                    <td>📧 Email:</td>
+                    <td><a href="mailto:S*****@gmail.com">S*****@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>📞 Phone:</td>
+                    <td><a href="tel:+919100000009">+91 91*******9</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h3>Explore</h3>
+            <p><a href="#menu">Menu</a></p>
+            <p><a href="#about">About Us</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Santhu Coffee Day. All Rights Reserved.</p>
+    </div>
+    </footer>
+         
+
+    <script>
+    function selectAndRedirect(name, price, desc) {
+        // 1. Get existing cart or start new array
+        let cart = JSON.parse(localStorage.getItem('coffeeCart')) || [];
+        
+        // 2. Add new item
+        cart.push({ name: name, price: price, desc: desc });
+        
+        // 3. Save back to localStorage
+        localStorage.setItem('coffeeCart', JSON.stringify(cart));
+        
+        // 4. Go to the checkout page
+        window.location.href = 'checkout.html';
+    }
+    </script>
+
+</body>
+</html>
