@@ -94,6 +94,14 @@ footer {
     margin-left: 10px;
 }
 
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .footer-table td {
     padding: 5px 10px 5px 0;
     font-size: 0.9rem;
@@ -101,8 +109,15 @@ footer {
 
 .footer-table a, .footer-links a {
     color: #fff;
-    text-decoration: none;
+    text-decoration:none;
     transition: 0.3s;
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-table a:hover, .footer-links a:hover {
@@ -119,7 +134,7 @@ footer {
 
     .footer-section {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .footer-table {
