@@ -76,11 +76,12 @@ footer {
 
 /* Horizontal Layout for Laptops & Tabs */
 .footer-container {
+    margin-top: -20px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items:flex-start;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 
 .footer-section {
